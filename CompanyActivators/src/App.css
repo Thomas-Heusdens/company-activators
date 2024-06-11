@@ -330,6 +330,16 @@ body {
   position: relative;
 }
 
+.state-message{
+  font-family: "ALT MariaCLara", sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+
+.dark-mode .state-message{
+  color: #FCFAEE;
+}
+
 .theme-checkbox::before {
   content: "";
   width: 24px; 

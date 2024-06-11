@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import {service_id, template_id, user_id} from "../credentials/cred.json"
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -11,10 +12,10 @@ const ContactForm = () => {
   
     emailjs
       .sendForm(
-        "service_5e4ilpv"!,
-        "template_npfow73"!,
+        service_id!,
+        template_id!,
         e.target as HTMLFormElement,
-        "xuHq5kmBF5sAwFE_u"!
+        user_id!
       )
       .then(
         (result) => {
@@ -57,7 +58,9 @@ const ContactForm = () => {
                     <label className="label">Message</label>
                   </div>
                   <button type="submit" className="btn" disabled={isSubmitting}>SEND</button>
-                  {stateMessage && <p>{stateMessage}</p>}
+                  <div className="state-message">
+                    {stateMessage && <p>{stateMessage}</p>}
+                  </div>
                 </form>
   );
 };

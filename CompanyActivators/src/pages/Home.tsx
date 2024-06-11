@@ -103,9 +103,9 @@ function Home() {
         setWidthGoogle(270);
         setHeightGoogle(200);
         setTopMenuDrop(-15);
-      } else if(width < 768){
+      } else if(width <= 768){
         setWidthGoogle(200);
-        setHeightGoogle(300);
+        setHeightGoogle(200);
         setTopMenuDrop(10);
       } else if (width < 1090) {
         setMenuStart(75);
