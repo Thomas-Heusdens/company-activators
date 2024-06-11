@@ -20,7 +20,6 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
   const [wrapperMargin, setWrapperMargin] = useState(0); // State to store the calculated margin
   const [menuStart, setMenuStart] = useState(140);
-  const [topMenuDrop, setTopMenuDrop] = useState(65);
   const [lastTopCheck, setLastTopCheck] = useState(10); 
   const [lastTopMenu, setLastTopMenu] = useState(-6); 
   const [widthGoogle, setWidthGoogle] = useState(520); 
@@ -100,28 +99,23 @@ function Home() {
       if(width <= 540) {
         setWidthGoogle(270);
         setHeightGoogle(200);
-        setTopMenuDrop(-15);
       } else if(width <= 768){
         setWidthGoogle(200);
         setHeightGoogle(200);
-        setTopMenuDrop(10); 
       } else if (width <= 1090) {
         setMenuStart(75);
-        setTopMenuDrop(30);
         setLastTopCheck(-3);
         setWidthGoogle(250);
         setHeightGoogle(295);
         setLastTopMenu(-3)
       } else if (width <= 1360) {
         setMenuStart(100);
-        setTopMenuDrop(50);
         setLastTopCheck(-3);
         setWidthGoogle(450);
         setHeightGoogle(300);
         setLastTopMenu(-6)
       } else {
         setMenuStart(140);
-        setTopMenuDrop(65);
         setLastTopCheck(10);
         setWidthGoogle(520);
         setHeightGoogle(300);
@@ -420,7 +414,7 @@ function Home() {
           )}
           {isMenuOpen && <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>}
           {isMenuOpen && (
-            <div className="dropdown-menu" style={{ position: "fixed", top: menuTop.get() + topMenuDrop, right: `${wrapperMargin}px`, zIndex: 101, textAlign: "right" }}>
+            <div className="dropdown-menu" style={{ position: "fixed", right: `${wrapperMargin}px`, zIndex: 101, textAlign: "right" }}>
               <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
                 <li style={{ margin: "10px 0" }}>
                   <a href="#services" onClick={() => handleScrollToSection(servicesRef)}>SERVICES</a>
@@ -571,7 +565,7 @@ function Home() {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39963.20875793531!2d4.373725494466242!3d51.24300964563638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f63435c044a3%3A0xa9fd5c643a4787c5!2sKinepolis%20Antwerpen!5e0!3m2!1sfr!2sbe!4v1717331502618!5m2!1sfr!2sbe" width={widthGoogle} height={heightGoogle} loading="lazy"></iframe>
                 <div className="black-box">
                   <ul>
-                    <li><a href="https://www.linkedin.com/in/nicolascartilier/" target="_blank">
+                    <li><a href="https://www.linkedin.com/company/company-activators/" target="_blank">
                       <div className="linked">
                         <img className="svg" src={darkMode ? "/images/linkedin-black.svg" : "/images/linkedin-white.svg"} alt="LinkedIn" />
                         <p>Company Activators</p>

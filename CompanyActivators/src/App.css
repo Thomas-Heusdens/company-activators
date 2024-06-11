@@ -1181,7 +1181,15 @@ input:focus ~ .label, input:valid ~ .label {
   width: 300px;
 }
 
+.dropdown-menu{
+  top: 208px;
+}
+
 @media(max-width: 1360px){
+  .dropdown-menu{
+    top: 150px;
+  }
+
   .map-container {
     position: relative;
     width: 450px; 
@@ -1281,6 +1289,22 @@ input:focus ~ .label, input:valid ~ .label {
 }
 
 @media(max-width: 1090px){
+  .dropdown-menu{
+    top: 105px;
+  }
+
+  .container-checkbox input{
+    padding: 11px;
+  }
+
+  .container-checkbox1 input{
+    padding: 11px;
+  }
+
+  .container-checkbox2 input{
+    padding: 11px;
+  }
+
   .back, .sayhi1{
     top: -3px;
   }
@@ -1402,12 +1426,37 @@ input:focus ~ .label, input:valid ~ .label {
     left: calc(100% - 16px - 2.5px); 
   }
 
+  .theme-checkbox1 {
+    width: 70px; 
+    height: 21px; 
+  }
+
+  .theme-checkbox1::before {
+    width: 16px; 
+    height: 16px; 
+    top: 2.5px; 
+    left: 2.5px; 
+  }
+
+  .theme-checkbox1:checked::before {
+    left: calc(100% - 16px - 2.5px); 
+  }
+
   .right h1{
     font-size: 27px;
+  }
+
+  .project img{
+    width: 250px;
+    height: 250px;
   }
 }
 
 @media(max-width: 768px){
+  .dropdown-menu{
+    top: 85px;
+  }
+
   .back, .sayhi1{
     top: -2.5px;
   }
@@ -1562,9 +1611,18 @@ input:focus ~ .label, input:valid ~ .label {
     width: 100%;
     height: auto;
   }
+
+  .project img{
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media(max-width: 540px){
+  .dropdown-menu{
+    top: 60px;
+  }
+
   p.loading-text{
     font-size: 18px;
   }
@@ -1585,7 +1643,7 @@ input:focus ~ .label, input:valid ~ .label {
 
   .activators{
     font-size: 36.5625px;
-    bottom: -10px;
+    bottom: -9px;
   }
 
   .sayhi, .sayhi1{
@@ -1665,7 +1723,12 @@ input:focus ~ .label, input:valid ~ .label {
     top: 37px;
   }
 
-  .theme-checkbox {
+  .theme-checkbox, .theme-checkbox1 {
     width: 50px; 
+  }
+
+  .project img{
+    width: 150px;
+    height: 150px;
   }
 }
