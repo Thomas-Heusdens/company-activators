@@ -1,42 +1,1671 @@
-#root {
-  max-width: 1280px;
+@import url("https://use.typekit.net/fyx1cgl.css");
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCFAEE;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #000; 
+  border-radius: 2px;
+  border: 3px solid #FCFAEE; 
+}
+
+body {
+  background-color: #FCFAEE;
+}
+
+.dark-mode {
+  background-color: #000;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCFAEE;
+  z-index: 1000;
+}
+
+.dark-mode .loading-screen{
+  background-color: #000;
+}
+
+.loading-image {
+  width: 500px;
+  height: auto;
+}
+
+.loading-text {
+  font-family: "ALT MAriaClara", sans-serif;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.loading-text {
+  color: #FCFAEE;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.dark-mode .loading-bar{
+  background-color: #3b3b3b;
+}
+
+.loading-progress {
+  height: 100%;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.dark-mode .loading-progress{
+  background-color: #FCFAEE;
+}
+
+.loading-percentage {
+  font-size: 18px;
+}
+
+.dark-mode .loading-percentage {
+  color: #FCFAEE;
+}
+
+.company {
+  font-size: 200px;
+  top: -20px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dark-mode .company {
+  color: #FCFAEE;
+}
+
+.sayhi {
+  font-size: 70px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+  padding-right: 800px;
+}
+
+.dark-mode .sayhi {
+  -webkit-text-stroke: 1px #FCFAEE;
+  color: #000;
+}
+
+.back {
+  font-size: 70px;
+  cursor: pointer;
+  right: 8.2%;
+  top: -6px;
+  position: fixed;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+  background-color: #FCFAEE;
+}
+
+.dark-mode .back {
+  -webkit-text-stroke: 1px #FCFAEE;
+  color: #000;
+  background-color: #000;
+}
+
+.sayhi1 {
+  left: 8.2%;
+  top: -6px;
+  font-size: 70px;
+  position: fixed;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+  padding-right: 800px;
+  background-color: #FCFAEE;
+}
+
+.dark-mode .sayhi1 {
+  -webkit-text-stroke: 1px #FCFAEE;
+  color: #000;
+  background-color: #000;
+}
+
+.menu {
+  font-size: 70px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+}
+
+.dark-mode .menu {
+  -webkit-text-stroke: 1px #FCFAEE;
+  color: #000;
+}
+
+.activators {
+  font-size: 162.5px;
+  bottom: -41px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.dark-mode .activators {
+  color: #FCFAEE;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  z-index: -1;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+}
+
+.services{
+  margin: 0;
+}
+
+.service {
+  margin-bottom: 40px;
+}
+
+.service h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .service h3{
+  color: #498DC1;
+}
+
+.service p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 928px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .service p{
+  border-top: solid 1px #498DC1;
+  color: #498DC1;
+}
+
+.marketing {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marketing h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .marketing h3{
+  color: #498DC1;
+}
+
+.marketing p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 600px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .marketing p{
+  border-top: solid 1px #498DC1;
+  color: #498DC1;
+}
+
+.name1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.name1 h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .name1 h3{
+  color: #498DC1;
+}
+
+.name1 p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 600px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .name1 p{
+  border-top: solid 1px #498DC1;
+  color: #498DC1;
+}
+
+.name2 h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .name2 h3{
+  color: #498DC1;
+}
+
+.name2 p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 928px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .name2 p{
+  border-top: solid 1px #498DC1;
+  color: #498DC1;
+}
+
+.theme-checkbox {
+  --toggle-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px; 
+  height: 30px; 
+  background: linear-gradient(to right, #000 50%, #FCFAEE 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  transition: 0.4s;
+  border-radius: 2px; 
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  position: relative;
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 24px; 
+  height: 24px; 
+  position: absolute;
+  top: 3px; 
+  left: 3px; 
+  background: #FCFAEE;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 24px - 3px); 
+  background: #000;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+.container-checkbox {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container-checkbox2 {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Styles for the Index - Visuals checkbox */
+.container-checkbox1 {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Add margin-top to separate from the previous section */
+}
+
+.theme-checkbox1 {
+  --toggle-size: 20px; /* Increase size */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 120px; /* Increase width */
+  height: 40px; /* Increase height */
+  background: #000; /* Default black background */
+  border-radius: 2px; /* Increase border radius */
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  position: relative;
+  transition: background-color 0.4s; /* Smooth transition */
+}
+
+.theme-checkbox1::before {
+  content: "";
+  width: 30px; /* Increase size */
+  height: 30px; /* Increase size */
+  position: absolute;
+  top: 5px; /* Adjust position */
+  left: 5px; /* Adjust position */
+  background: #FCFAEE; /* Default circle color */
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.theme-checkbox1:checked::before {
+  left: calc(100% - 30px - 5px); /* Adjust position */
+  background: #FCFAEE; /* Circle color stays the same when checked */
+}
+
+.dark-mode .theme-checkbox1 {
+  background: #FCFAEE; /* Inverse background color for dark mode */
+}
+
+.dark-mode .theme-checkbox1::before {
+  background: #000; /* Inverse circle color for dark mode */
+}
+
+.text-checkbox1 {
+  font-size: 24px; /* Increase font size */
+  font-family: "ALT MariaClara", sans-serif;
+  color: #000;
+  margin-right: 15px; /* Adjust margin */
+}
+
+.text-checkbox2 {
+  font-size: 24px; /* Increase font size */
+  font-family: "ALT MariaClara", sans-serif;
+  color: #000;
+  margin-left: 15px; /* Adjust margin */
+}
+
+.dark-mode .text-checkbox1 {
+  color: #FCFAEE;
+}
+
+.dark-mode .text-checkbox2 {
+  color: #FCFAEE;
+}
+
+.text-checkbox {
+  font-size: 20px;
+  font-family: "ALT MariaClara", sans-serif;
+  color: #000;
+  margin: 0 10px;
+}
+
+.dark-mode .text-checkbox {
+  color: #FCFAEE;
+}
+
+.marketing-image {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 35px 0;
+}
+
+.projects{
+  margin: 0;
+  border-bottom: solid 1px black;
+}
+
+.dark-mode .projects{
+  margin-left: 8.2%;
+  border-bottom: solid 1px #C3190F;
+}
+
+.project{
+  border-top: solid 1px black;
+}
+
+.dark-mode .project{
+  border-top: solid 1px #C3190F;
+}
+
+.project h3{
+  font-size: 70px;
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  color: #000;
+  margin: 0;
+}
+
+.dark-mode .project h3{
+  color: #C3190F;
+}
+
+.project img{
+  margin: 20px 0 18px 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.transition-service {
+  display: flex;
+  align-items: center;
   text-align: center;
+  margin: 100px 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.transition-line-service {
+  flex: 1;
+  height: 2px;
+  background-color: #000; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.transition-title-service {
+  margin: 0 20px; 
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 100px; 
+  color: #000; 
+}
+
+.dark-mode .transition-line-service {
+  background-color: #FCFAEE;
+}
+
+.dark-mode .transition-title-service {
+  color: #FCFAEE;
+}
+
+.transition-projects {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 102;
+  margin: 100px 0; 
+  background-color: #FCFAEE;
+}
+
+.dark-mode .transition-projects {
+  background-color: #000;
+}
+
+.transition-line-projects {
+  flex: 1;
+  height: 2px;
+  background-color: #000; 
+}
+
+.transition-title-projects {
+  margin: 0 20px; 
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 100px; 
+  color: #000; 
+}
+
+.dark-mode .transition-line-projects {
+  background-color: #FCFAEE; 
+}
+
+.dark-mode  .transition-title-projects {
+  color: #FCFAEE; 
+}
+
+.transition-about {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 102;
+  margin: 100px 0; 
+  background-color: #FCFAEE;
+}
+
+.dark-mode .transition-about {
+  background-color: #000;
+}
+
+.transition-line-about {
+  flex: 1;
+  height: 2px;
+  background-color: #000; 
+}
+
+.transition-title-about {
+  margin: 0 20px; 
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 100px; 
+  color: #000; 
+}
+
+.dark-mode .transition-line-about {
+  background-color: #FCFAEE; 
+}
+
+.dark-mode  .transition-title-about {
+  color: #FCFAEE; 
+}
+
+.transition-contact {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 102;
+  margin: 100px 0; 
+  background-color: #FCFAEE;
+}
+
+.dark-mode .transition-contact {
+  background-color: #000;
+}
+
+.transition-line-contact {
+  flex: 1;
+  height: 2px;
+  background-color: #000; 
+}
+
+.transition-title-contact {
+  margin: 0 20px; 
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 100px; 
+  color: #000; 
+}
+
+.dark-mode .transition-line-contact {
+  background-color: #FCFAEE; 
+}
+
+.dark-mode  .transition-title-contact {
+  color: #FCFAEE; 
+}
+
+.about{
+  margin: 0;
+}
+
+.our-mission {
+  margin-bottom: 40px;
+}
+
+.our-mission h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .our-mission h3{
+  color: #EF7F09;
+}
+
+.our-mission p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 928px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .our-mission p{
+  border-top: solid 1px #EF7F09;
+  color: #EF7F09;
+}
+
+.our-mission img{
+  margin-top: 20px;
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.our-story {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.our-story h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .our-story h3{
+  color: #EF7F09;
+}
+
+.our-story p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 600px;
+  margin: 0 0 40px 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .our-story p{
+  border-top: solid 1px #EF7F09;
+  color: #EF7F09;
+}
+
+.our-partners {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.right{
+  margin-left: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.right p{
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0 0 60px;
+}
+
+.right h1{
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  margin: 0 0 0 60px;
+}
+
+.dark-mode .right p, .dark-mode .right h1{
+  color: #EF7F09;
+}
+
+.right .slick-slider{
+  width: 300px;
+}
+
+.citation{
+  max-width: 500px;
+}
+
+.citation :nth-child(2){
+  margin-top: 10px;
+}
+
+.our-partners h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .our-partners h3{
+  color: #EF7F09;
+}
+
+.left p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .left p{
+  border-top: solid 1px #EF7F09;
+  color: #EF7F09;
+}
+
+.contact {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-contact {
+  margin-top: 80px;
+}
+
+.form {
+  padding-top: 20px;
+  border-top: solid 1px #000;
+  width: 500px;
+}
+
+.dark-mode .form {
+  border-top: solid 1px #94CED4;
+}
+
+.contact-form h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .contact-form h3 {
+  color: #94CED4;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  border: solid 1px #9e9e9e;
+  border-radius: 2px;
+  background: none;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "ALT MariaClara", sans-serif;
+  color: #000;
+  width: 450px;
+}
+
+.dark-mode input {
+  color: #FCFAEE;
+}
+
+.label {
+  position: absolute;
+  font-family: "ALT MariaClara", sans-serif;
+  left: 15px;
+  z-index: 10;
+  color: #000;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+input:focus, input:valid {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.dark-mode input:focus, .dark-mode input:valid {
+  border: 1px solid #94CED4;
+}
+
+input:focus ~ .label, input:valid ~ .label {
+  transform: translateX(-10%) translateY(-50%) scale(0.9);
+  background-color: #FCFAEE;
+  padding: 0 .2em;
+  color: #000;
+}
+
+.dark-mode input:focus ~ .label, .dark-mode input:valid ~ .label {
+  color: #94CED4;
+  background-color: #000;
+}
+
+.btn {
+  display: inline-block;
+  width: 481px; /* Fixed width */
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  font-family: "roc-grotesk-wide", sans-serif;
+}
+
+.dark-mode .btn {
+  color: #94CED4;
+  border: 1px solid #94CED4;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.dark-mode .btn::before {
+  background-color: #94CED4;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
+
+.btn:hover {
+  transition: 0.4s;
+  color: #FCFAEE;
+}
+
+.dark-mode .btn:hover {
+  transition: 0.4s;
+  color: #000;
+}
+
+.map-container {
+  position: relative;
+  width: 520px; 
+  height: 300px; 
+}
+
+.black-box {
+  position: absolute;
+  z-index: 95;
+  bottom: -48px;
+  left: -115px;
+  width: 200px;
+  height: 175px;
+  background-color: #000;
+  color: #FCFAEE;
+  padding: 10px;
+}
+
+.dark-mode .black-box{
+  background-color: #FCFAEE;
+}
+
+
+.black-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.black-box ul li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.black-box ul li a {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  color: #FCFAEE;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dark-mode .black-box ul li a{
+  color: #000;
+}
+
+.black-box ul li a i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.linked{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.insta{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dark-mode .svg-dark-mode {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.svg{
+  width: 28px;
+  height: 28px;
+}
+
+.dropdown-menu ul li a{
+  text-decoration: none;
+  font-size: 70px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+  padding-left: 400px;
+}
+
+.dark-mode .dropdown-menu ul li:nth-child(1) a {
+  -webkit-text-stroke: 1px #498DC1;
+  color: #000;
+}
+
+.dark-mode .dropdown-menu ul li:nth-child(2) a {
+  -webkit-text-stroke: 1px #C3190F; /* Example color */
+  color: #000;
+}
+
+.dark-mode .dropdown-menu ul li:nth-child(3) a {
+  -webkit-text-stroke: 1px #EF7F09; /* Example color */
+  color: #000;
+}
+
+.dark-mode .dropdown-menu ul li:nth-child(4) a {
+  -webkit-text-stroke: 1px #94CED4; /* Example color */
+  color: #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FCFAEE; /* Adjust the color and opacity as needed */
+  z-index: 98; /* Make sure it's behind the menu but above other content */
+}
+
+.dark-mode .overlay {
+  background-color: #000;
+}
+
+
+.dropdown-menu ul li a{
+  text-decoration: none;
+  font-size: 70px;
+  font-family: "roc-grotesk-wide", sans-serif;
+  font-weight: 700;
+  color: #FCFAEE;
+  font-style: normal;
+  -webkit-text-stroke: 2px black;
+  padding-left: 400px;
+}
+
+.dark-mode .dropdown-menu ul li a {
+  -webkit-text-stroke: 1px #000;
+  color: #000;
+}
+
+.dark-mode .dropdown-menu ul li a.active {
+  -webkit-text-stroke: 1px #fff;
+  color: #fff;
+}
+
+.dropdown-menu ul li a.active {
+  -webkit-text-stroke: 1px #000;
+  color: #000;
+}
+
+.header{
+  display: flex;
+  margin: 0 8.2%;
+  background-color: #FCFAEE;
+}
+
+.header.dark-mode {
+  background-color: #000;
+}
+
+.project-page{
+  display: flex;
+  flex-direction: column;
+  margin: 100px 8.2% 40px 8.2%;
+}
+
+.project-page img{
+  width: 600px;
+  align-self: center;
+}
+
+.project-name {
+  margin-bottom: 40px;
+}
+
+.project-name h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .project-name h3{
+  color: #C3190F;
+}
+
+.project-name p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 928px;
+  margin: 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .project-name p{
+  border-top: solid 1px #C3190F;
+  color: #C3190F;
+}
+
+.what {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 0 0;
+}
+
+.what h3 {
+  font-family: "ALT MariaClara", sans-serif;
+  font-weight: lighter;
+  font-size: 70px;
+  margin: 0;
+}
+
+.dark-mode .what h3{
+  color: #C3190F;
+}
+
+.what p {
+  font-family: "ALT MariaClara", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 600px;
+  margin: 0 0 40px 0;
+  border-top: solid 1px black;
+  padding-top: 10px;
+}
+
+.dark-mode .what p{
+  border-top: solid 1px #C3190F;
+  color: #C3190F;
+}
+
+.index a, .visuals a {
+  text-decoration: none;
+}
+
+.index a:hover, .visuals a:hover {
+  text-decoration: none;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Adjust slick arrows */
+.slick-prev, .slick-next {
+  height: 0;
+  z-index: 10;
+}
+
+/* Adjust slick arrows */
+.slick-prev:before, .slick-next:before {
+  color: #000; /* Dark color for light mode */
+}
+
+.dark-mode .slick-prev:before, .dark-mode .slick-next:before {
+  color: #FCFAEE; /* Light color for dark mode */
+}
+
+.message-container{
+  width: 300px;
+}
+
+@media(max-width: 1360px){
+  .map-container {
+    position: relative;
+    width: 450px; 
+    height: 300px; 
   }
-  to {
-    transform: rotate(360deg);
+
+  .black-box{
+    bottom: -20px;
+  }
+  .right .slick-slider{
+    width: 250px;
+  }
+
+  .company{
+    font-size: 150px;
+  }
+
+  .activators{
+    font-size: 121.875px;
+    bottom: -30px;
+  }
+
+  .sayhi, .menu, .dropdown-menu ul li a, .sayhi1, .back{
+    font-size: 55px;
+  }
+
+  .citation{
+    max-width: 300px;
+  }
+
+  .our-partners img{
+    width: 250px;
+    height: 250px;
+  }
+
+  .service h3, .marketing h3, .name1 h3, .name2 h3, .project h3, .about h3, .contact h3, .project-page h3{
+    font-size: 50px;
+  }
+
+  .service p, .marketing p, .name1 p, .name2 p, .about p, .project-page p{
+    font-size: 14px;
+  }
+
+  .service p, .name2 p, .our-mission p, .project-name p{
+    width: 725px;
+  }
+
+  .marketing p, .name1 p, .our-story p, .what p{
+    width: 500px;
+  }
+
+  .transition-title-service, .transition-title-contact, .transition-title-projects, .transition-title-about{
+    font-size: 75px;
+  }
+
+  .text-checkbox1, .text-checkbox2{
+    font-size: 20px;
+  }
+
+  .left p{
+    max-width: 300px;
+  }
+
+  .project h3{
+    padding: 20px 0;
+  }
+
+  .marketing-image{
+    width: 250px;
+    height: 350px;
+  }
+
+  .our-mission img {
+    width: 400px;
+    height: 250px;
+  }
+
+  input{
+    width: 300px;
+  }
+
+  .form {
+    width: 335px;
+  }
+
+  .btn{
+    width: 332px;
+  }
+
+  .container-checkbox{
+    top: 0px;
+  }
+
+  .project-page img{
+    width: 500px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media(max-width: 1090px){
+  .back, .sayhi1{
+    top: -3px;
+  }
+
+  .right .slick-slider{
+    width: 200px;
+  }
+
+  .company{
+    font-size: 100px;
+    top: -10px;
+  }
+
+  .activators{
+    font-size: 81.25px;
+    bottom: -20px;
+  }
+
+  .sayhi, .sayhi1{
+    padding-right: 400px;
+  }
+
+  .sayhi, .menu, .dropdown-menu ul li a, .sayhi1, .back{
+    font-size: 35px;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .service h3, .marketing h3, .name1 h3, .name2 h3, .project h3, .about h3, .contact h3, .project-page h3{
+    font-size: 30px;
+  }
+
+  .project h3{
+    padding: 10px 0;
+  }
+
+  .service p, .marketing p, .name1 p, .name2 p, .about p, .project-page p{
+    font-size: 13px;
+  }
+
+  .right{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .right h1, .right p{
+    margin: 0;
+  }
+  .our-partners img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .transition-title-service, .transition-title-contact, .transition-title-projects, .transition-title-about{
+    font-size: 50px;
+  }
+
+  p.text-checkbox{
+    font-size: 16px;
+  }
+
+  .service p, .name2 p, .our-mission p, .project-name p{
+    width: 520px;
+  }
+
+  .marketing p, .name1 p, .our-story p, .what p{
+    width: 400px;
+  }
+
+  .left p{
+    max-width: 250px;
+  }
+
+  .marketing-image{
+    width: 200px;
+    height: 300px;
+  }
+
+  .our-mission img {
+    width: 350px;
+    height: 200px;
+  }
+
+  input{
+    width: 200px;
+  }
+
+  .form {
+    width: 235px;
+  }
+
+  .btn{
+    width: 232px;
+  }
+
+  .black-box{
+    bottom: 0;
+  }
+
+  .map-container {
+    position: relative;
+    width: 250px; 
+    height: 298px; 
+  }
+
+  .theme-checkbox {
+    width: 70px; 
+    height: 21px; 
+  }
+
+  .theme-checkbox::before {
+    width: 16px; 
+    height: 16px; 
+    top: 2.5px; 
+    left: 2.5px; 
+  }
+
+  .theme-checkbox:checked::before {
+    left: calc(100% - 16px - 2.5px); 
+  }
+
+  .right h1{
+    font-size: 27px;
   }
 }
 
-.card {
-  padding: 2em;
+@media(max-width: 768px){
+  .back, .sayhi1{
+    top: -2.5px;
+  }
+
+  .company{
+    font-size: 75px;
+    top: -10px;
+  }
+
+  .activators{
+    font-size: 60.9375px;
+    bottom: -15px;
+  }
+
+  .sayhi, .sayhi1{
+    padding-right: 300px;
+  }
+
+  .sayhi, .menu, .dropdown-menu ul li a, .sayhi1, .back{
+    font-size: 30px;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .dark-mode .sayhi, .dark-mode .menu, .dark-mode .dropdown-menu ul li a, .dark-mode .sayhi1, .dark-mode .back{
+    -webkit-text-stroke: 0.5px #FCFAEE;
+  }
+
+  .service h3, .marketing h3, .name1 h3, .name2 h3, .project h3, .about h3, .contact h3, .project-page h3{
+    font-size: 25px;
+  }
+
+  .project h3{
+    padding: 10px 0;
+  }
+
+  .service p, .marketing p, .name1 p, .name2 p, .about p, .project-page p{
+    font-size: 12px;
+  }
+
+  .right{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .right h1{
+    font-size: 21px;
+  }
+
+  .right h3, .right p{
+    margin: 0;
+  }
+
+  .our-partners img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .transition-title-service, .transition-title-contact, .transition-title-projects, .transition-title-about{
+    font-size: 35px;
+  }
+
+  .transition-title-service, .transition-line-service{
+    margin-top: 100px;
+  }
+
+  p.text-checkbox{
+    display: none;
+  }
+
+  .service p, .name2 p, .our-mission p, .project-name p{
+    width: 100%;
+  }
+
+  .marketing p, .name1 p, .our-story p, .what p{
+    width: 100%;
+  }
+
+  .marketing, .name1, .our-story{
+    justify-content: baseline;
+    align-items: baseline;
+  }
+
+  .right p{
+    text-align: left;
+  }
+
+  .right h3{
+    text-align: center;
+  }
+
+  .left p{
+    max-width: 250px;
+  }
+
+  .marketing-image{
+    width: 200px;
+    height: 300px;
+  }
+
+  .our-mission img {
+    width: 350px;
+    height: 200px;
+  }
+
+  input{
+    width: 160px;
+  }
+
+  .form {
+    width: 192px;
+  }
+
+  .btn{
+    width: 192px;
+  }
+
+  .map-container {
+    position: relative;
+    width: 200px; 
+    height: 300px; 
+  }
+
+  .image-home img{
+    width: 300px;
+  }
+
+  .black-box{
+    position: relative;
+    height: 145px;
+    left: 0;
+    width: 181px;
+  }
+
+  .black-box p{
+    font-size: 13px;
+  }
+
+  .right-contact {
+    margin-top: 0;
+  }
+
+  .container-checkbox{
+    top: 58px;
+  }
+
+  .menu, .sayhi{
+    top: 60px;
+  }
+
+  .project-page img{
+    width: 100%;
+    height: auto;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media(max-width: 540px){
+  p.loading-text{
+    font-size: 18px;
+  }
+
+  .loading-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .back, .sayhi1{
+    top: -2px;
+  }
+
+  .company{
+    font-size: 45px;
+    top: -5px;
+  }
+
+  .activators{
+    font-size: 36.5625px;
+    bottom: -10px;
+  }
+
+  .sayhi, .sayhi1{
+    padding-right: 150px;
+  }
+
+  .sayhi, .menu, .dropdown-menu ul li a, .sayhi1, .back{
+    font-size: 25px;
+  }
+
+  .service h3, .marketing h3, .name1 h3, .name2 h3, .project h3, .about h3, .contact h3, .project-page h3{
+    font-size: 22px;
+  }
+
+  .transition-title-service, .transition-title-contact, .transition-title-projects, .transition-title-about{
+    font-size: 30px;
+  }
+
+  .transition-title-service, .transition-line-service{
+    margin-top: 75px;
+  }
+
+  .left p{
+    max-width: 100%;
+  }
+
+  .our-mission img {
+    width: 100%;
+    height: auto;
+  }
+
+  .our-partners{
+    flex-direction: column;
+  }
+
+  .right{
+    margin: 30px 0 0 0;
+  }
+
+  .right h1{
+    font-size: 18px;
+  }
+
+  .contact{
+    flex-direction: column;
+  }
+
+  input{
+    width: 243px;
+  }
+
+  .form {
+    width: 275px;
+  }
+
+  .btn{
+    width: 274px;
+    margin-bottom: 20px;
+  }
+
+  .black-box{
+    width: 254px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+  }
+
+  .map-container{
+    width: 275px;
+    height: 375px;
+  }
+
+  .container-checkbox{
+    top: 35px;
+  }
+
+  .menu, .sayhi{
+    top: 37px;
+  }
+
+  .theme-checkbox {
+    width: 50px; 
+  }
 }
