@@ -20,7 +20,6 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
   const [wrapperMargin, setWrapperMargin] = useState(0); // State to store the calculated margin
   const [menuStart, setMenuStart] = useState(140);
-  const [lastTopCheck, setLastTopCheck] = useState(10); 
   const [lastTopMenu, setLastTopMenu] = useState(-6); 
   const [widthGoogle, setWidthGoogle] = useState(520); 
   const [heightGoogle, setHeightGoogle] = useState(300); 
@@ -111,21 +110,18 @@ function Home() {
       } else if (width < 1090) {
         setMenuStart(75);
         setTopMenuDrop(30);
-        setLastTopCheck(-3);
         setWidthGoogle(250);
         setHeightGoogle(295);
         setLastTopMenu(-3)
       } else if (width < 1360) {
         setMenuStart(100);
         setTopMenuDrop(50);
-        setLastTopCheck(-3);
         setWidthGoogle(450);
         setHeightGoogle(300);
         setLastTopMenu(-5)
       } else {
         setMenuStart(140);
         setTopMenuDrop(65);
-        setLastTopCheck(10);
         setWidthGoogle(520);
         setHeightGoogle(300);
         setLastTopMenu(-6)
@@ -147,7 +143,7 @@ function Home() {
   const companyX = useTransform(scrollY, [0, window.innerHeight], [0, -window.innerWidth]);
   const activatorsX = useTransform(scrollY, [0, window.innerHeight], [0, window.innerWidth]);
   const menuTop = useTransform(scrollY, [600, window.innerHeight], [menuStart, lastTopMenu]);
-  const checkboxTop = useTransform(scrollY, [600, window.innerHeight], [menuStart, lastTopCheck]);
+  const checkboxTop = useTransform(scrollY, [600, window.innerHeight], [menuStart, -3]);
   const backgroundColor = useTransform(
     scrollY,
     [500, window.innerHeight],
