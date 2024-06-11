@@ -28,6 +28,9 @@ function Home() {
   const [showModelViewer, setShowModelViewer] = useState(true); // State to show/hide ModelViewer
   const [containerHeight, setContainerHeight] = useState("200vh");
   const [screenHeightTooSmall, setScreenHeightTooSmall] = useState(false); // New state for screen height
+  const [topMenuDrop, setTopMenuDrop] = useState(65);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
   const scrollY = useMotionValue(0);
   const companyRef = useRef<HTMLDivElement>(null);
@@ -92,6 +95,7 @@ function Home() {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
+      setWindowWidth(width);
       setIsAnimationActive(width >= 768 && height >= 600);
       setShowModelViewer(width >= 768 && height >= 600);
       setContainerHeight(width >= 768 && height >= 600 ? "200vh" : "100vh");
@@ -99,23 +103,28 @@ function Home() {
       if(width <= 540) {
         setWidthGoogle(270);
         setHeightGoogle(200);
-      } else if(width <= 768){
+        setTopMenuDrop(-15);
+      } else if(width < 768){
         setWidthGoogle(200);
-        setHeightGoogle(200);
-      } else if (width <= 1090) {
+        setHeightGoogle(300);
+        setTopMenuDrop(10);
+      } else if (width < 1090) {
         setMenuStart(75);
+        setTopMenuDrop(30);
         setLastTopCheck(-3);
         setWidthGoogle(250);
         setHeightGoogle(295);
         setLastTopMenu(-3)
-      } else if (width <= 1360) {
+      } else if (width < 1360) {
         setMenuStart(100);
+        setTopMenuDrop(50);
         setLastTopCheck(-3);
         setWidthGoogle(450);
         setHeightGoogle(300);
-        setLastTopMenu(-6)
+        setLastTopMenu(-5)
       } else {
         setMenuStart(140);
+        setTopMenuDrop(65);
         setLastTopCheck(10);
         setWidthGoogle(520);
         setHeightGoogle(300);
@@ -414,7 +423,7 @@ function Home() {
           )}
           {isMenuOpen && <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>}
           {isMenuOpen && (
-            <div className="dropdown-menu" style={{ position: "fixed", right: `${wrapperMargin}px`, zIndex: 101, textAlign: "right" }}>
+            <div className="dropdown-menu" style={{ position: "fixed", top: windowWidth >= 768 ? menuTop.get() + topMenuDrop : undefined, right: `${wrapperMargin}px`, zIndex: 101, textAlign: "right" }}>
               <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
                 <li style={{ margin: "10px 0" }}>
                   <a href="#services" onClick={() => handleScrollToSection(servicesRef)}>SERVICES</a>
