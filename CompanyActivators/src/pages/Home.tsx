@@ -333,6 +333,7 @@ function Home() {
                 <input
                   type="checkbox"
                   className="theme-checkbox"
+                  style={{ border: "none"}}
                   onChange={() => setDarkMode(!darkMode)}
                   checked={darkMode}
                 />
@@ -483,6 +484,7 @@ function Home() {
               <input
                 type="checkbox"
                 className="theme-checkbox1"
+                style={{ border: "none"}}
                 onChange={() => setShowVisuals(!showVisuals)}
               />
               <p className="text-checkbox2">Visuals</p>

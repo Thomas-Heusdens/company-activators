@@ -83,6 +83,7 @@ const Project = () => {
             type="checkbox"
             className="theme-checkbox"
             onChange={() => setDarkMode(!darkMode)}
+            style={{ border: "none"}}
             checked={darkMode}
           />
           <p className="text-checkbox">Dark mode</p>

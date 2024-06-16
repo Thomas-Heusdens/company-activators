@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient } = require("mongodb");
-require("dotenv").config({ path: "./config.env" });
+require("dotenv").config({ path: "./cred.env" });
 
 const app = express();
 const port = 5000;

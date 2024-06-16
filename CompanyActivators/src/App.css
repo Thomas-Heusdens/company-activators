@@ -330,6 +330,10 @@ body {
   position: relative;
 }
 
+.theme-checkbox input{
+  border: none;
+}
+
 .state-message{
   font-family: "ALT MariaCLara", sans-serif;
   font-weight: lighter;
