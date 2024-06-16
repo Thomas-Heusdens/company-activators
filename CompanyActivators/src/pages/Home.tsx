@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import ModelViewer from "../components/ModelViewer";
+import ModelGrey from "../components/ModelGrey";
 import ContactForm from '../components/ContactForm';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -103,7 +104,7 @@ function Home() {
         setWidthGoogle(270);
         setHeightGoogle(200);
         setTopMenuDrop(-15);
-      } else if(width <= 768){
+      } else if(width < 768){
         setWidthGoogle(200);
         setHeightGoogle(200);
         setTopMenuDrop(10);
@@ -306,7 +307,7 @@ function Home() {
             )}
             {showModelViewer ? (
               <div style={{ zIndex: 99 }}>
-                <ModelViewer scrollY={scrollY} />
+                {darkMode ? <ModelGrey scrollY={scrollY} /> : <ModelViewer scrollY={scrollY} />}
               </div>
             ) : (
               <div className="image-home" style={{ zIndex: 99, display: "flex", justifyContent: "center", alignItems: "center"}}>
