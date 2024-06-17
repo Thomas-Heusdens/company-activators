@@ -104,7 +104,7 @@ function Home() {
         setWidthGoogle(270);
         setHeightGoogle(200);
         setTopMenuDrop(-15);
-      } else if(width < 768){
+      } else if(width <= 768){
         setWidthGoogle(200);
         setHeightGoogle(200);
         setTopMenuDrop(10);
@@ -387,6 +387,7 @@ function Home() {
                   type="checkbox"
                   className="theme-checkbox"
                   onChange={() => setDarkMode(!darkMode)}
+                  style={{ border: "none" }}
                   checked={darkMode}
                 />
                 <p className="text-checkbox">Dark mode</p>
