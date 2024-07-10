@@ -9,6 +9,7 @@ const Project = () => {
   const [project, setProject] = useState(null);
   const [numberImg, setNumberImg] = useState(2)
   const [arrows, setArrows] = useState(true)
+  const [marginTop, setMarginTop] = useState("100px")
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('darkMode') === 'true';
   });
@@ -36,6 +37,12 @@ const Project = () => {
 
     if(width < 330){
       setArrows(false)
+    }
+
+    if(width < 768){
+      setMarginTop("50px")
+    }else if(width < 1090){
+      setMarginTop("80px")
     }
 
     if(width < 1360){
@@ -90,7 +97,7 @@ const Project = () => {
         </div>
         <div className="back" onClick={() => navigate("/")} style={{ right: `${wrapperMargin}px` }}>BACK</div>
       </div>
-      <div className="project-page" style={{ margin: `100px ${wrapperMargin}px 40px ${wrapperMargin}px` }}>
+      <div className="project-page" style={{ margin: `${marginTop} ${wrapperMargin}px 40px ${wrapperMargin}px` }}>
         <div className="project-name">
           <h3>{project.name}</h3>
           <p>{project.description}</p>

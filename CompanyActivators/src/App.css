@@ -1734,6 +1734,22 @@ input:focus ~ .label, input:valid ~ .label {
 
   .theme-checkbox, .theme-checkbox1 {
     width: 50px; 
+    height: 18px;
+  }
+
+  .theme-checkbox::before, .theme-checkbox1::before {
+    width: 13px; 
+    height: 13px; 
+    top: 2.5px; 
+    left: 2.5px; 
+  }
+
+  .theme-checkbox:checked::before, .theme-checkbox1:checked::before {
+    left: calc(100% - 13px - 2.5px); 
+  }
+
+  .container-checkbox input, .container-checkbox1 input{
+    padding: 9px;
   }
 
   .project img{
