@@ -453,21 +453,21 @@ function Home() {
             }}
           >
             <div className="service">
-              <h3>Services</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+              <h3>Sales</h3>
+              <p>At Company Activators, we believe in the potential of scale-ups and startups, and we only work with clients we truly believe in. With our years of experience in sales, we're passionate about helping you succeed. We start by diving into your current sales processes to identify what's working and where there's room for improvement. Then, we work closely with you to develop personalised strategies that fit your business. Our goal is to provide genuine support and expert knowledge to help your business grow.</p>
             </div>
             <div className="marketing">
-              <h3>Marketing</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
-              <img className="marketing-image" src="/images/img1.jpg" alt="img" />
+              <h3>Brand activation</h3>
+              <p>Our brand activation services focus on unleashing creativity and staying on top of current trends to bring your brand to life. We begin by exploring your brand positioning and engagement strategies, then collaborate with you to design unique activation campaigns that capture the essence of your brand and connect with your target audience. By keeping up with the latest trends and infusing innovative ideas, we ensure each activation is not only impactful and memorable but also relevant and aligned with today's market. Together, we'll turn your brand into a standout experience that transforms casual followers into loyal fans.</p>
+              <img className="marketing-image" src="/images/brand.jpg" alt="img" />
             </div>
             <div className="name1">
-              <h3>Name</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+              <h3>Events</h3>
+              <p>Our event services focus on creating unforgettable experiences for your audience. With our extensive experience in the industry, we have the right connections and skills to ensure your events are a success. We're with you every step of the way, from initial concept development to final execution, working closely to align every detail with your objectives and brand identity. Our dedication to excellence means we're always ready to go the extra mile, making sure your events are flawlessly executed and leave a lasting impression on all attendees.</p>
             </div>
             <div className="name2">
-              <h3>Name</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+              <h3>Marketing</h3>
+              <p>Our marketing services are all about reimagining and executing strategic plans that deliver real results. With a team of graphic design and communication experts, we cover every aspect of your marketing needs from A to Z. We specialize in both online and offline channels, crafting comprehensive strategies that are perfectly tailored to your brand. Our team excels at creating engaging social media content, eye-catching visuals, and impactful messaging. By staying on top of the latest trends and continuously analyzing data, we ensure your marketing efforts are not only professional and creative but also highly effective. Whether it's branding, digital marketing, or traditional advertising, we bring your brand to life.</p>
             </div>
           </div>
           <div className="transition-projects" ref={projectsRef} style={{
@@ -521,12 +521,14 @@ function Home() {
             }}>
             <div className="our-mission">
               <h3>Our Mission</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+              <p>Our mission is to empower businesses we genuinely believe in, with a focus on scale-ups and startups. We recognize companies with successful products or services that just need that extra push to reach their full potential. Our goal is to provide that crucial support, working not for them, but alongside them. Leveraging our years of experience and a team of dedicated experts, we collaborate to overcome challenges and achieve success. By building strong partnerships and providing customized solutions, we elevate your business.</p>
               <img src="/images/img1.jpg" alt="alt" />
             </div>
             <div className="our-story">
               <h3>Our Story</h3>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English.</p>
+              <p>At Company Activators, our journey is driven by a passion for helping businesses reach their full potential. Founded by Nicolas Cartilier, a seasoned entrepreneur, and Leandro Matias Barreiro, a young entrepreneur with a fresh perspective, we combine extensive experience with innovative thinking. <br />
+                Nicolas and Leandro have hands-on expertise in sales and events, having witnessed the challenges talented professionals face. We've seen many experts excel in their craft but struggle to navigate the business landscape. That's where we come in. Company Activators bridges gaps, offering tailored support from strategic planning to marketing magic. <br />
+                Our story is rooted in the belief that every great product or service deserves to succeed. Leveraging our years of experience and a team of dedicated experts, we work alongside our clients to drive growth, overcome challenges, and achieve success.</p>
             </div>
             <div className="our-partners">
               <div className="left">
