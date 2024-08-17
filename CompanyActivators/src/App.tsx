@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <BrowserRouter basename="/company-activators">
+      <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="project/:id" element={<Project />} />
