@@ -1,10 +1,13 @@
 import{ useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
-import { useTransform } from 'framer-motion';
+import { MotionValue, useTransform } from 'framer-motion';
 
-export default function ModelViewer({ scrollY }) {
-    const rotationY = useTransform(scrollY, [0, window.innerHeight], [0, Math.PI * 2]);
+type Props = {
+  scrollY: MotionValue<number>; // Or any other appropriate type
+}
+export default function ModelViewer({ scrollY }: Props) {
+  const rotationY = useTransform(scrollY, [0, window.innerHeight], [0, Math.PI * 2]);
     
   return (
     <div className="main">
@@ -19,7 +22,10 @@ export default function ModelViewer({ scrollY }) {
   );
 }
 
-function Model({ rotationY }) {
+type ModelProps = {
+  rotationY: MotionValue<number>;
+}
+function Model({ rotationY } : ModelProps) {
   const { scene } = useGLTF('/model.glb');
   const mesh = useRef(scene);
 
