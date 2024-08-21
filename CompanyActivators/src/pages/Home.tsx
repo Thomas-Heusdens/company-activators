@@ -58,7 +58,7 @@ function Home() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/projects");
+        const response = await fetch("/api/projects");
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -68,7 +68,7 @@ function Home() {
 
     const fetchPartners = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/partners");
+        const response = await fetch("/api/partners");
         const data = await response.json();
         setPartners(data);
         console.log(data);

@@ -38,7 +38,7 @@ const Project = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/projects/${id}`);
+        const response = await fetch(`/api/projects/${id}`);
         const data = await response.json();
         setProject(data);
       } catch (error) {
