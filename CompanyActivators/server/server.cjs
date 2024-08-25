@@ -4,9 +4,9 @@ const { MongoClient } = require("mongodb");
 require("dotenv").config({ path: "./cred.env" });
 
 const app = express();
-const port = 5000;
+const port = 3000;
 
-app.use(cors()); 
+app.use(cors());
 
 let db;
 

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import ModelViewer from "../components/ModelViewer";
 import ModelGrey from "../components/ModelGrey";
@@ -8,6 +8,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
+interface ProjectType {
+  description: string;
+  id: number;
+  image: string;
+  images: string[];
+  name: string;
+  visual: string;
+  what: string;
+  _id: string;
+}
+interface PartnerType {
+  _id: string;
+  id: number;
+  name: string;
+  person: string;
+  image: string;
+  description: string;
+  link: string;
+}
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -16,8 +36,8 @@ function Home() {
   });
   const [showVisuals, setShowVisuals] = useState(false); // New state to manage checkbox
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [projects, setProjects] = useState([]); // State to store projects
-  const [partners, setPartners] = useState([]); // State to store partners
+  const [projects, setProjects] = useState<ProjectType[]>([]); // State to store projects
+  const [partners, setPartners] = useState<PartnerType[]>([]); // State to store partners
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
   const [wrapperMargin, setWrapperMargin] = useState(0); // State to store the calculated margin
   const [menuStart, setMenuStart] = useState(140);
@@ -38,7 +58,7 @@ function Home() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/projects");
+        const response = await fetch("/api/projects");
         const data = await response.json();
         setProjects(data);
       } catch (error) {
@@ -48,9 +68,10 @@ function Home() {
 
     const fetchPartners = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/partners");
+        const response = await fetch("/api/partners");
         const data = await response.json();
         setPartners(data);
+        console.log(data);
       } catch (error) {
         console.error("Failed to fetch partners:", error);
       }
@@ -69,11 +90,15 @@ function Home() {
     }
   }, [darkMode]);
 
-  function getTextWidth(text, font) {
+  function getTextWidth(text: string, font: string) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-    context.font = font || getComputedStyle(document.body).font;
+    if (context) {
+      context.font = font || getComputedStyle(document.body).font;
     return context.measureText(text).width;
+    } else {
+      return 0;
+    }
   }
 
   const calculateWrapperMargin = () => {
@@ -81,7 +106,6 @@ function Home() {
       const text = companyRef.current.innerText;
       const font = getComputedStyle(companyRef.current).font;
       const textWidth = getTextWidth(text, font);
-      console.log(textWidth)
       const screenWidth = window.innerWidth;
       const x = screenWidth - textWidth;
       const margin = x / 2;
@@ -207,8 +231,17 @@ function Home() {
 
   const transition = { type: "spring", stiffness: 20, damping: 10 };
 
-  const handleScrollToSection = (ref) => {
-    const offsetTop = ref.current.offsetTop - 50;
+  // const handleScrollToSection = (ref) => {
+  //   const offsetTop = ref.current.offsetTop - 50;
+  //   window.scrollTo({
+  //     top: offsetTop,
+  //     behavior: "smooth",
+  //   });
+  //   setIsMenuOpen(false);
+  // };
+
+  const handleScrollToSection = (ref: React.RefObject<HTMLElement>): void => {
+    const offsetTop: number = ref?.current ? (ref?.current?.offsetTop - 50) : 0;
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth",
@@ -224,13 +257,13 @@ function Home() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    afterChange: (index) => setCurrentSlide(index) 
+    afterChange: (index: SetStateAction<number>) => setCurrentSlide(index) 
   };
-
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const servicesRef = useRef(null);
-  const contactRef = useRef(null);
+ 
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -315,7 +348,7 @@ function Home() {
               </div>
             )}
           </div>
-          {isAnimationActive ? (
+          {/* {isAnimationActive ? ( */}
             <>
               <motion.div
                 className="container-checkbox"
@@ -370,9 +403,29 @@ function Home() {
                 MENU
               </motion.div>
             </>
-          ) : (
+          {/* ) : ( */}
             <>
-              <div
+             {/* <motion.div
+                className="container-checkbox"
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  backgroundColor: backgroundColor,
+                  zIndex: 101,
+                }}
+              >
+                <p className="text-checkbox">Light mode</p>
+                <input
+                  type="checkbox"
+                  className="theme-checkbox"
+                  onChange={() => setDarkMode(!darkMode)}
+                  style={{ border: "none" }}
+                  checked={darkMode}
+                />
+                <p className="text-checkbox">Dark mode</p>
+              </motion.div> */}
+              {/* <div
                 className="container-checkbox"
                 style={{
                   position: "absolute",
@@ -417,9 +470,9 @@ function Home() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 MENU
-              </div>
+              </div> */}
             </>
-          )}
+          {/* )} */}
           {isMenuOpen && <div className="overlay" onClick={() => setIsMenuOpen(false)}></div>}
           {isMenuOpen && (
             <div className="dropdown-menu" style={{ position: "fixed", top: windowWidth >= 768 ? menuTop.get() + topMenuDrop : undefined, right: `${wrapperMargin}px`, zIndex: 101, textAlign: "right" }}>

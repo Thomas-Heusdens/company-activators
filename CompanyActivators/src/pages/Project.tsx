@@ -1,12 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+interface Project {
+  description: string;
+  id: number;
+  image: string;
+  images: string[];
+  name: string;
+  visual: string;
+  what: string;
+  _id: string;
+}
+
 const Project = () => {
   const { id } = useParams();
-  const [project, setProject] = useState(null);
+  // const [project, setProject] = useState(null);
+  const [project, setProject] = useState<Project | null>(null);
+  
   const [numberImg, setNumberImg] = useState(2)
   const [arrows, setArrows] = useState(true)
   const [marginTop, setMarginTop] = useState("100px")
@@ -14,14 +27,18 @@ const Project = () => {
     return localStorage.getItem('darkMode') === 'true';
   });
   const navigate = useNavigate();
-  const [wrapperMargin, setWrapperMargin] = useState(() => {
-    return parseFloat(localStorage.getItem('wrapperMargin')) || 0;
+  // const [wrapperMargin, setWrapperMargin] = useState(() => {
+  //   return parseFloat(localStorage.getItem('wrapperMargin')) || 0;
+  // });
+
+  const [wrapperMargin] = useState<number>(() => {
+    return parseFloat(localStorage.getItem('wrapperMargin') as string) || 0;
   });
 
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/projects/${id}`);
+        const response = await fetch(`/api/projects/${id}`);
         const data = await response.json();
         setProject(data);
       } catch (error) {
@@ -107,9 +124,9 @@ const Project = () => {
           <h3>What</h3>
           <p>{project.what}</p>
         </div>
-        <div className="more-images">
+         <div className="more-images">
           <Slider {...settings}>
-            {project.images.map((img, index) => (
+            {project?.images.map((img, index) => (
               <div key={index}>
                 <img src={`/images/${img}`} alt={`Project ${index}`} className="carousel-image" />
               </div>
